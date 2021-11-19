@@ -18,8 +18,7 @@ public class MessageParser {
         
     public static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.UK);
     
-     public MessageParser(){
-         
+     public MessageParser(){    
      }
      
     public String CheckForMessage(String message) throws IncorrectDateException, IncorrectActionException{
@@ -54,6 +53,7 @@ public class MessageParser {
         if(length == 4){
             if(splitMessage[0].equalsIgnoreCase("add")){
                LocalDate date =  toDate(splitMessage[1]);
+                    
                if(date!=null){
                    ToDoItem item = new ToDoItem(date,splitMessage[2], splitMessage[3]);
                    return DataStorage.getInstance().add(item);
