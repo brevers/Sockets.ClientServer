@@ -10,5 +10,5 @@ package com.mycompany.sockets.server;
  * @author Tamara
  */
 public class IncorrectActionException extends Exception{
-    
+   
 }
