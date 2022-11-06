@@ -23,7 +23,7 @@ public class ClientHandler extends Thread{
     public ClientHandler(Socket client){
         this.client = client;
         parser = new MessageParser();
-        System.out.println("Client connected "+client.getRemoteSocketAddress());
+        System.out.println("Client connected"+client.getRemoteSocketAddress());
     }
 
     @Override
@@ -43,7 +43,7 @@ public class ClientHandler extends Thread{
                     new InputStreamReader(
                             client.getInputStream()));
             
-            //Print the string messages received from the client through the inputStream
+            //Print the string messages received from the client through the inputStream String line
             String line;
             while((line = in.readLine())!=null){
                 System.out.println(line);
